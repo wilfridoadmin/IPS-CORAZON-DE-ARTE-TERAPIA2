@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPS UNIDAD CORAZÓN DE ARTE TERAPIA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" onclick="login()">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <div id="dashboard-container" style="display: none;">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showDashboard()">Dashboard</a></li>
+                <li><a href="#" onclick="showPatients()">Pacientes Agregados</a></li>
+                <li><a href="#" onclick="printPatient()">Imprimir Paciente</a></li>
+            </ul>
+        </nav>
+
+        <div id="dashboard">
+            <h2>Dashboard</h2>
+            <form id="patient-form">
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="age">Edad:</label>
+                <input type="number" id="age" name="age" required>
+                <label for="date">Fecha de Atención:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="evolution">Evolución Diaria:</label>
+                <textarea id="evolution" name="evolution" required></textarea>
+                <label for="observations">Observaciones:</label>
+                <textarea id="observations" name="observations" required></textarea>
+                <button type="button" onclick="addPatient()">Guardar</button>
+            </form>
+
+            <div id="patient-list">
+                <h3>Pacientes Agregados</h3>
+                <table id="patients-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre Completo</th>
+                            <th>Edad</th>
+                            <th>Fecha de Atención</th>
+                            <th>Evolución Diaria</th>
+                            <th>Observaciones</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Los datos de pacientes se agregarán aquí -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
